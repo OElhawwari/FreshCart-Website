@@ -5,8 +5,6 @@
   "homepage": "https://OElhawwari.github.io/FreshCart-Website",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
