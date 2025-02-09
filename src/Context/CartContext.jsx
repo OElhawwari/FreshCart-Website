@@ -61,7 +61,11 @@ export default function CartContextProvider({ children }) {
 
     async function getCartProducts() {
         try {
-            const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/cart', { headers });
+            const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/cart', {
+                headers : {
+                    token: localStorage.getItem('token')
+                }
+            });
 
             if (data) {
                 setCart(data);

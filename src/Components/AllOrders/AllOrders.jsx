@@ -3,12 +3,15 @@ import style from './AllOrders.module.css';
 import Loading from '../Loading/Loading';
 import { Link } from 'react-router-dom';
 import { AllOrdersContext } from '../../Context/AllOrdersContext';
+import { jwtDecode } from 'jwt-decode';
+
 
 export default function AllOrders() {
   let { getUserOrders, allOrders } = useContext(AllOrdersContext);
 
   useEffect(() => {
-    getUserOrders();
+    let token = jwtDecode(localStorage.getItem('token'))
+    getUserOrders(token.id);
   }, []);
 
   return (
