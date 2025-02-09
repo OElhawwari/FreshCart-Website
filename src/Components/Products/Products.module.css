@@ -1,0 +1,27 @@
+:root {
+    --main-color: #0aad0a;
+    --light-color: #f0f3f2;
+    --shadow: rgba(	10, 173, 10, .2) 0px 2px 4px -1px, rgba(	10, 173, 10, .14) 0px 4px 5px 0px, rgba(	10, 173, 10, .12) 0px 1px 10px 0px;
+    --font-family: 'Encode Sans Expanded', sans-serif;
+    --rating-color: #ffc908;
+}
+
+.rating-color {
+    color: var(--rating-color);
+}
+
+.product:hover {
+    box-shadow: var(--shadow);
+}
+
+.product .btn {
+    transition: transform 1s, opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.product:hover .btn {
+    opacity: 1;
+    transform: translateY(0%);
+
+}
